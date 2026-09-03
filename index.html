@@ -574,6 +574,28 @@
     flex-wrap:wrap;
   }
 
+  .resume-viewer{
+    padding:18px;
+    overflow:hidden;
+  }
+
+  .resume-frame{
+    display:block;
+    width:100%;
+    height:min(80vh, 920px);
+    min-height:620px;
+    border:0;
+    border-radius:12px;
+    background:var(--card-2);
+  }
+
+  .resume-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:18px;
+  }
+
   .contact-grid{
     display:grid;
     grid-template-columns:1fr 0.9fr;
@@ -772,6 +794,11 @@
       font-size:34px;
     }
 
+    .resume-frame{
+      height:70vh;
+      min-height:480px;
+    }
+
     .timeline-card h3{
       font-size:24px;
     }
@@ -804,8 +831,8 @@
     <a href="#education">Education</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
-    <a href="Sami_Resume_Updated_OnePage_Justified_Clickable.pdf" download>Resume</a>
     <button id="themeToggle" class="btn secondary" type="button" aria-label="Switch to light theme">🌙</button>
   </div>
 </nav>
@@ -820,7 +847,7 @@
       </div>
       <p>Building AI systems and scalable data products with machine learning, cloud infrastructure, and production ready engineering.</p>
       <div class="hero-actions">
-        <a class="btn" href="Sami_Resume_Updated_OnePage_Justified_Clickable.pdf" download>Download Resume</a>
+        <a class="btn" href="#resume">View Resume</a>
         <a class="btn secondary" href="#projects">View Projects</a>
         <a class="btn secondary" href="#contact">Contact Me</a>
       </div>
@@ -961,6 +988,21 @@
   <h2 class="section-title">Projects</h2>
   <p class="section-copy">A curated selection of machine learning, computer vision, and production AI projects.</p>
   <div id="project-grid" class="projects"></div>
+</section>
+
+<section id="resume" class="section container reveal">
+  <div class="section-kicker">Credentials</div>
+  <h2 class="section-title">Resume</h2>
+  <p class="section-copy">Preview my resume directly below or open it in a full browser tab.</p>
+  <div class="resume-viewer card">
+    <iframe class="resume-frame" src="resume.pdf#view=FitH" title="Sami Ahmed Mohammed resume preview">
+      <p>Your browser cannot display the PDF preview. <a href="resume.pdf" target="_blank" rel="noreferrer">Open the resume</a>.</p>
+    </iframe>
+    <div class="resume-actions">
+      <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Open Full Screen</a>
+      <a class="btn secondary" href="resume.pdf" download>Download PDF</a>
+    </div>
+  </div>
 </section>
 
 <section id="contact" class="section container reveal">
